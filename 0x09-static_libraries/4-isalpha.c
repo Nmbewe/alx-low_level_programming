@@ -1,11 +1,28 @@
 #include "main.h"
-		
+
 /**
- * _isalpha - checks for alphabetic character
- * @c: the character to be checked
- * Return: 1 if c is a letter, 0 otherwise
+ * _strpbrk - Searches a string for any of a set of bytes.
+ * @s: string.
+ * @accept: set of bytes.
+ *
+ * Return: s and \n
  */
-int _isalpha(int c)
+char *_strpbrk(char *s, char *accept)
 {
-	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
+	int index;
+
+	while (*s)
+	{
+		index = 0;
+		while (accept[index])
+		{
+			if (*s == accept[index])
+			{
+				return (s);
+			}
+			index++;
+		}
+		s++;
+	}
+	return ('\0');
 }
