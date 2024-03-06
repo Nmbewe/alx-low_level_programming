@@ -1,2 +1,1 @@
-alx-low level programming
-Directory: 0x17-doubly linke ists
+my solution to doubly linked lists
